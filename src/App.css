@@ -1,0 +1,31 @@
+body {
+  background-color: #141414;
+}
+
+.App-header {
+  width: 100%;
+  
+}
+
+-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.img-logo {
+  display: block;
+  margin: auto;
+  height: 200px;
+}
+
+.pp {
+  color: white;
+}
