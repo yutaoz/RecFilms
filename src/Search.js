@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import {createBrowserHistory} from 'history';
+import MovieGrid from './MovieGrid.js';
 import './search.css';
 
   function Search(){
@@ -46,7 +47,7 @@ import './search.css';
                       handleType(e)}
                 /><br></br><br></br>
             </form>
-            <p className="pp">{movies[0] && movies[0].Title ? movies[0].Title : "na"}</p>
+            <MovieGrid data={movies}></MovieGrid>
     </div>
     )
 }
