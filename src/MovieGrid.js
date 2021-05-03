@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import './moviegrid.css';
+import errimg from './errimg.jpg';
 
 function MovieGrid(props) {
     useEffect(() => {
@@ -13,7 +14,7 @@ function MovieGrid(props) {
             {props.data.map((item, i) => {
                     return(
                     <div className="griditem" key={i}>
-                        <img src={item.Poster} className="poster"></img><br></br>
+                        <img src={item.Poster} alt={errimg} className="poster"></img><br></br>
                         <div className="overlay">
                             <p>{item.Title}</p>
                             <button type="button" className="addbutton">Add to list</button>
@@ -22,7 +23,11 @@ function MovieGrid(props) {
             })}
          </div>)
     } else {
-        return(<p>Nothing Found</p>)
+        return(
+        <div className="errorcontainer">
+            <p className="error">NO RESULTS</p>
+        </div>
+        )
     }
 
     

@@ -14,7 +14,6 @@ function App() {
       <header className="App-header">
         <img src={title} className="img-logo"></img>
       </header>
-      <Sidebar />
       <Search />
     </div>
   );
