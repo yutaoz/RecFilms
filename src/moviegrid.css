@@ -41,10 +41,27 @@
 
   .overlay p {
       padding: 20px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: "Inter", sans-serif;
       color: white;
       
   }
+
+.addbutton {
+    display: block;
+    background-color: #CC4BC2;;
+    margin: auto;
+    width: 50%;
+    height: 15%;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.addbutton:hover {
+    cursor: pointer;
+    transition: .3s ease;
+}
 
 .griditem:hover .overlay {
     opacity: 1;
