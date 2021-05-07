@@ -35,6 +35,7 @@ import Sidebar from './Sidebar.js';
       setMovieList(listMovies);
     }
 
+    // removeFromList removes the movie object from a list
     const removeFromList = (movie) => {
       let listMovies = [...movieList];
       const index = listMovies.indexOf(movie);
