@@ -17,7 +17,7 @@ function MovieGrid(props) {
                         <img src={item.Poster} alt={errimg} className="poster"></img><br></br>
                         <div className="overlay">
                             <p>{item.Title}</p>
-                            <button type="button" className="addbutton">Add to list</button>
+                            <button type="button" className="addbutton" onClick={() => {props.addList(item)}}>Add to list</button>
                         </div>
                     </div>)
             })}

@@ -4,10 +4,14 @@ import './sidebar.css';
 function Sidebar(props) {
     return (
         <Menu>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
+            {props.listData.map((item) => {
+                return(
+                <div className="listitem">
+                    <p>{item.Title}</p>
+                    <button className="deletebutton" type="button" onClick={() => props.removeList(item)}>Remove</button>
+                </div>
+                )
+            })}
         </Menu>
     )
 }

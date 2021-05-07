@@ -63,3 +63,22 @@
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
   }
+
+ .listitem p {
+    padding: 20px;
+ }
+
+ .listitem {
+   display: block;
+   text-align: center;
+   background-color: #141414;
+   border-radius: 7px;
+   box-shadow: 5px 5px 5px;
+ }
+
+ .deletebutton {
+  width: 70px;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+ }

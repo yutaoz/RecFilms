@@ -2,11 +2,13 @@ import React, {useEffect, useState, useRef} from 'react';
 import {createBrowserHistory} from 'history';
 import MovieGrid from './MovieGrid.js';
 import './search.css';
+import Sidebar from './Sidebar.js';
 
   function Search(){
     const [movies, setMovies] = useState([]);
     const [searching, setSearching] = useState(null);
     const history = createBrowserHistory();
+    const [movieList, setMovieList] = useState([]);
 
     // searchMovies(q) makes a get request with parameter q
     const searchMovies = async (q) => {
@@ -25,6 +27,21 @@ import './search.css';
          )
          
     }
+
+    // addToList adds the movie object to the list
+    const addToList = (movie) => {
+      let listMovies = [...movieList];
+      listMovies.push(movie);
+      setMovieList(listMovies);
+    }
+
+    const removeFromList = (movie) => {
+      let listMovies = [...movieList];
+      const index = listMovies.indexOf(movie);
+      listMovies.splice(index, 1);
+      setMovieList(listMovies);
+    }
+
     // handleType updates query parameter in url and calls search function
     const handleType = (e) => {  
       history.push({
@@ -35,6 +52,7 @@ import './search.css';
     }
     return (
         <div className="searchContainer">
+          <Sidebar listData={movieList} removeList={removeFromList}></Sidebar>
         <form className="searchform"> 
                 <input
                     type="text"
@@ -47,7 +65,7 @@ import './search.css';
                       handleType(e)}
                 /><br></br><br></br>
             </form>
-            <MovieGrid data={movies}></MovieGrid>
+            <MovieGrid data={movies} addList={addToList}></MovieGrid>
     </div>
     )
 }
