@@ -82,3 +82,11 @@
   padding: 5px;
   background-color: white;
  }
+
+ .copylink {
+   color: black;
+ }
+
+ .copylink:hover {
+   color: black;
+ }

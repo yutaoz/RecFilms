@@ -4,7 +4,8 @@ import MovieGrid from './MovieGrid.js';
 import './search.css';
 import Sidebar from './Sidebar.js';
 
-  function Search(){
+  function Search(props){
+    
     const [movies, setMovies] = useState([]);
     const [searching, setSearching] = useState(null);
     const history = createBrowserHistory();
@@ -53,7 +54,7 @@ import Sidebar from './Sidebar.js';
     }
     return (
         <div className="searchContainer">
-          <Sidebar listData={movieList} removeList={removeFromList}></Sidebar>
+          <Sidebar listData={movieList} removeList={removeFromList} id={props.id}></Sidebar>
         <form className="searchform"> 
                 <input
                     type="text"

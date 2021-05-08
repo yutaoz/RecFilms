@@ -4,6 +4,7 @@ import './sidebar.css';
 function Sidebar(props) {
     return (
         <Menu>
+            <input type="text" className="copylink" value={`www.localhost.com/lists/${props.id}`} readonly></input>
             {props.listData.map((item) => {
                 return(
                 <div className="listitem">
