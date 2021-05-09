@@ -34,6 +34,9 @@ import Sidebar from './Sidebar.js';
       let listMovies = [...movieList];
       listMovies.push(movie);
       setMovieList(listMovies);
+      fetch(`http://localhost:3001/add?id=${props.id}&movie=${JSON.stringify(movie)}`)
+        .then(data => data.json())
+        .then((res) => {console.log(res)})
     }
 
     // removeFromList removes the movie object from a list
@@ -42,6 +45,9 @@ import Sidebar from './Sidebar.js';
       const index = listMovies.indexOf(movie);
       listMovies.splice(index, 1);
       setMovieList(listMovies);
+      fetch(`http://localhost:3001/remove?id=${props.id}&movie=${JSON.stringify(movie)}`)
+        .then(data => data.json())
+        .then((res) => {console.log(res)})
     }
 
     // handleType updates query parameter in url and calls search function

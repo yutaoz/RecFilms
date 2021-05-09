@@ -3,10 +3,6 @@ import './moviegrid.css';
 import errimg from './errimg.jpg';
 
 function MovieGrid(props) {
-    useEffect(() => {
-        console.log(props.data[0]);
-        
-    })
 
     if (props.data[0]) {
         return (
