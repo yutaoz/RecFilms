@@ -34,7 +34,7 @@ import Sidebar from './Sidebar.js';
       let listMovies = [...movieList];
       listMovies.push(movie);
       setMovieList(listMovies);
-      fetch(`http://localhost:3001/add?id=${props.id}&movie=${JSON.stringify(movie)}`)
+      fetch(`http://www.recfilms.tech/add?id=${props.id}&movie=${JSON.stringify(movie)}`)
         .then(data => data.json())
         .then((res) => {console.log(res)})
     }
@@ -45,7 +45,7 @@ import Sidebar from './Sidebar.js';
       const index = listMovies.indexOf(movie);
       listMovies.splice(index, 1);
       setMovieList(listMovies);
-      fetch(`http://localhost:3001/remove?id=${props.id}&movie=${JSON.stringify(movie)}`)
+      fetch(`http://www.recfilms.tech/remove?id=${props.id}&movie=${JSON.stringify(movie)}`)
         .then(data => data.json())
         .then((res) => {console.log(res)})
     }
