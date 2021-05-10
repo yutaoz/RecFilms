@@ -14,7 +14,7 @@ import Sidebar from './Sidebar.js';
     // searchMovies(q) makes a get request with parameter q
     const searchMovies = async (q) => {
         setSearching(true);
-        const url = `http://www.omdbapi.com/?&apikey=b5820ebc&s=${q}&type="movie"`;
+        const url = `https://www.omdbapi.com/?&apikey=b5820ebc&s=${q}&type="movie"`;
         return fetch(url)
          .then(data => data.json())
          .then(res => 
