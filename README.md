@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+RecFilms is a webapp for creating and sharing your movie recommendation lists to anyone by link.
+
+When building, be sure to use RecFilmsServer as well to connect to your personal database. Or, add to the RecFilms list database!
+
+If building with RecFilmsServer, the addToList and removeFromList functions in Search.js must fetch localhost/your personal domain
+The link generated in Sidebar.js must also be updated to reflect these changes.
+
 ## Available Scripts
 
 In the project directory, you can run:
