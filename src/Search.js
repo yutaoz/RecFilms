@@ -1,5 +1,4 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {createBrowserHistory} from 'history';
 import MovieGrid from './MovieGrid.js';
 import './search.css';
 import Sidebar from './Sidebar.js';
@@ -8,7 +7,6 @@ import Sidebar from './Sidebar.js';
     
     const [movies, setMovies] = useState([]);
     const [searching, setSearching] = useState(null);
-    const history = createBrowserHistory();
     const [movieList, setMovieList] = useState([]);
 
     // searchMovies(q) makes a get request with parameter q
@@ -52,10 +50,6 @@ import Sidebar from './Sidebar.js';
 
     // handleType updates query parameter in url and calls search function
     const handleType = (e) => {  
-      history.push({
-        pathname: "/",
-        search: `?s=${e.target.value}`
-      })
       searchMovies(e.target.value);
     }
     return (
