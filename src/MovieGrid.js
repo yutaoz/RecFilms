@@ -21,7 +21,7 @@ function MovieGrid(props) {
     } else {
         return(
         <div className="errorcontainer">
-            <p className="error">NO RESULTS</p>
+            <p className="error">Search for a movie, or make your search more specific</p>
         </div>
         )
     }
