@@ -10,7 +10,7 @@ function MovieGrid(props) {
             {props.data.map((item, i) => {
                     return(
                     <div className="griditem" key={i}>
-                        <img src={item.Poster} alt={errimg} className="poster"></img><br></br>
+                        <img src={item.Poster !== "N/A" ? item.Poster : 'https://i.ibb.co/R2Hb260/errimg.jpg'} className="poster"></img><br></br>
                         <div className="overlay">
                             <p>{item.Title}</p>
                             <button type="button" className="addbutton" onClick={() => {props.addList(item)}}>Add to list</button>
